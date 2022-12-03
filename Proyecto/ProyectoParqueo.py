@@ -187,6 +187,7 @@ class Ui_MainWindow(object):
         self.cargarColumnasYfilas()
         self.btnCargarArchivo.clicked.connect(self.inicializarDataArchivos)
         self.btnCargarParqueo.clicked.connect(self.inicializarDataParqueos)
+        self.btnAgregar.clicked.connect(self.agregarInfo)
 
     def cargarColumnasYfilas(self):
         self.tablaRegistros.setColumnCount(8)
@@ -214,36 +215,70 @@ class Ui_MainWindow(object):
         self.tablaParqueos.horizontalHeader().setStretchLastSection(True)
         self.tablaParqueos.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         self.inicializarDataParqueos()
+        self.entrada.setDateTime(QtCore.QDateTime.currentDateTime())
+        self.salida.setDateTime(QtCore.QDateTime.currentDateTime())
+
 
     def inicializarDataParqueos(self):
-        linea = []
         fileP = open(r"C:\Users\Compu Fire\eclipse\Documents\parqueos.txt","r")
         c=0
         for line in fileP.readlines():
             c= c+1
-            linea = line.split("-")
+            l = line.split("-")
             self.tablaParqueos.setRowCount(c+1)
-            self.tablaParqueos.setItem(c,1,QtWidgets.QTableWidgetItem(linea[0]))
-            self.tablaParqueos.setItem(c,2,QtWidgets.QTableWidgetItem(linea[1]))
-            self.tablaParqueos.setItem(c,3,QtWidgets.QTableWidgetItem(linea[2]))
-            self.tablaParqueos.setItem(c,4,QtWidgets.QTableWidgetItem(linea[3]))
+            self.tablaParqueos.setItem(c,1,QtWidgets.QTableWidgetItem(l[0]))
+            self.tablaParqueos.setItem(c,2,QtWidgets.QTableWidgetItem(l[1]))
+            self.tablaParqueos.setItem(c,3,QtWidgets.QTableWidgetItem(l[2]))
+            self.tablaParqueos.setItem(c,4,QtWidgets.QTableWidgetItem(l[3]))
 
     def inicializarDataArchivos(self):
-        linea = []
         fileDa = open(r"C:\Users\Compu Fire\eclipse\Documents\demo.txt","r") #pon r antes de tu cadena normal. Convierte una cadena normal en una cadena sin procesar:
-        c=0
+        c =  self.tablaRegistros.rowCount()
+
         for line in fileDa.readlines():
             c=c+1
-            linea = line
-            datoseparados = linea.split(",")
-            self.tablaRegistros.setRowCount(c+1)
-            self.tablaRegistros.setItem(c,0,QtWidgets.QTableWidgetItem(datoseparados[0]))
-            self.tablaRegistros.setItem(c,1,QtWidgets.QTableWidgetItem(datoseparados[1]))
-            self.tablaRegistros.setItem(c,2,QtWidgets.QTableWidgetItem(datoseparados[2]))
-            self.tablaRegistros.setItem(c,3,QtWidgets.QTableWidgetItem(datoseparados[3]))
-            self.tablaRegistros.setItem(c,4,QtWidgets.QTableWidgetItem(datoseparados[4]))
-            self.tablaRegistros.setItem(c,5,QtWidgets.QTableWidgetItem(datoseparados[5]))
-            self.tablaRegistros.setItem(c,6,QtWidgets.QTableWidgetItem(datoseparados[6]))
+            l = line.split(",")
+            self.tablaRegistros.setRowCount(c)
+            self.tablaRegistros.setItem(c-1,0,QtWidgets.QTableWidgetItem(l[0]))
+            self.tablaRegistros.setItem(c-1,1,QtWidgets.QTableWidgetItem(l[1]))
+            self.tablaRegistros.setItem(c-1,2,QtWidgets.QTableWidgetItem(l[2]))
+            self.tablaRegistros.setItem(c-1,3,QtWidgets.QTableWidgetItem(l[3]))
+            self.tablaRegistros.setItem(c-1,4,QtWidgets.QTableWidgetItem(l[4]))
+            self.tablaRegistros.setItem(c-1,5,QtWidgets.QTableWidgetItem(l[5]))
+            self.tablaRegistros.setItem(c-1,6,QtWidgets.QTableWidgetItem(l[6]))
+            linea.append(l)
+
+    def agregarInfo(self):
+        name = self.nombre.text()
+        lastname = self.apellido.text()
+        phone = self.telefono.text()
+        nit = self.nit.text()
+        placa = self.placa.text()
+        hentrada = self.entrada.dateTime().toString(self.entrada.displayFormat())
+        hsalida = self.salida.dateTime().toString(self.salida.displayFormat())
+        #print(name, lastname, phone,nit,placa,hentrada,hsalida)
+        usuarionuevo = []
+        usuarionuevo.append(name)
+        usuarionuevo.append(lastname)
+        usuarionuevo.append(phone)
+        usuarionuevo.append(nit)
+        usuarionuevo.append(placa)
+        usuarionuevo.append(hentrada)
+        usuarionuevo.append(hsalida)
+        #print(usuarionuevo)
+        c =  self.tablaRegistros.rowCount()
+        c=c+1
+        self.tablaRegistros.setRowCount(c)
+        self.tablaRegistros.setItem(c-1,0,QtWidgets.QTableWidgetItem(usuarionuevo[0]))
+        self.tablaRegistros.setItem(c-1,1,QtWidgets.QTableWidgetItem(usuarionuevo[1]))
+        self.tablaRegistros.setItem(c-1,2,QtWidgets.QTableWidgetItem(usuarionuevo[2]))
+        self.tablaRegistros.setItem(c-1,3,QtWidgets.QTableWidgetItem(usuarionuevo[3]))
+        self.tablaRegistros.setItem(c-1,4,QtWidgets.QTableWidgetItem(usuarionuevo[4]))
+        self.tablaRegistros.setItem(c-1,5,QtWidgets.QTableWidgetItem(usuarionuevo[5]))
+        self.tablaRegistros.setItem(c-1,6,QtWidgets.QTableWidgetItem(usuarionuevo[6]))
+        linea.append(usuarionuevo)
+        print(linea)
+linea = []
 
 
 
