@@ -1,0 +1,13 @@
+Norte1-Sedan,Pick Up-car wash,aspirado
+Norte2-Coupe,Camioneta-car wash
+Norte3-SUV-car wash,sanitario
+Sur1-Pick Up-sanitario
+Sur2-Camioneta-car wash,sanitario
+Sur3-Hatch Back-car wash,sanitario,aspirado
+Este1-Camioneta-car wash
+Este2-Sedan-car wash,sanitario
+Este3-Pick Up,Hatch Back-sanitario,aspirado
+Oeste1-Coupe,Sedan-car wash,sanitario,aspirado
+Oeste2-SUV,Pick Up-car wash
+Oeste3-Pick Up-car wash,aspirado
+Oeste4-Sedan,Hatch Back-aspirado

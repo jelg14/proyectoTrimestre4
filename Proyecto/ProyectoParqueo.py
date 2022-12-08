@@ -9,26 +9,26 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from tkinter import messagebox
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(947, 635)
+        MainWindow.resize(651, 573)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../../../../../Downloads/aparcamiento-de-coches.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./aparcamiento-de-coches.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.btnAgregar = QtWidgets.QPushButton(self.centralwidget)
         self.btnAgregar.setEnabled(True)
-        self.btnAgregar.setGeometry(QtCore.QRect(70, 260, 101, 41))
+        self.btnAgregar.setGeometry(QtCore.QRect(175, 245, 278, 38))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.btnAgregar.setFont(font)
         self.btnAgregar.setObjectName("btnAgregar")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(330, 150, 91, 111))
+        self.groupBox.setGeometry(QtCore.QRect(430, 20, 91, 111))
         self.groupBox.setObjectName("groupBox")
         self.carWash = QtWidgets.QCheckBox(self.groupBox)
         self.carWash.setGeometry(QtCore.QRect(20, 20, 70, 17))
@@ -40,13 +40,13 @@ class Ui_MainWindow(object):
         self.aspirado.setGeometry(QtCore.QRect(20, 80, 70, 17))
         self.aspirado.setObjectName("aspirado")
         self.nombre = QtWidgets.QLineEdit(self.centralwidget)
-        self.nombre.setGeometry(QtCore.QRect(60, 50, 371, 20))
+        self.nombre.setGeometry(QtCore.QRect(60, 50, 351, 20))
         self.nombre.setObjectName("nombre")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 50, 71, 20))
         self.label_2.setObjectName("label_2")
         self.apellido = QtWidgets.QLineEdit(self.centralwidget)
-        self.apellido.setGeometry(QtCore.QRect(60, 80, 371, 20))
+        self.apellido.setGeometry(QtCore.QRect(60, 80, 351, 20))
         self.apellido.setObjectName("apellido")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(10, 80, 71, 20))
@@ -59,10 +59,10 @@ class Ui_MainWindow(object):
         self.label_4.setGeometry(QtCore.QRect(10, 110, 71, 20))
         self.label_4.setObjectName("label_4")
         self.nit = QtWidgets.QLineEdit(self.centralwidget)
-        self.nit.setGeometry(QtCore.QRect(270, 110, 161, 20))
+        self.nit.setGeometry(QtCore.QRect(250, 110, 161, 20))
         self.nit.setObjectName("nit")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(220, 110, 71, 20))
+        self.label_5.setGeometry(QtCore.QRect(220, 110, 41, 20))
         self.label_5.setObjectName("label_5")
         self.placa = QtWidgets.QLineEdit(self.centralwidget)
         self.placa.setGeometry(QtCore.QRect(60, 140, 141, 20))
@@ -71,14 +71,14 @@ class Ui_MainWindow(object):
         self.label_6.setGeometry(QtCore.QRect(10, 140, 71, 20))
         self.label_6.setObjectName("label_6")
         self.entrada = QtWidgets.QDateTimeEdit(self.centralwidget)
-        self.entrada.setGeometry(QtCore.QRect(80, 180, 121, 22))
+        self.entrada.setGeometry(QtCore.QRect(80, 170, 121, 22))
         self.entrada.setObjectName("entrada")
         self.salida = QtWidgets.QDateTimeEdit(self.centralwidget)
-        self.salida.setGeometry(QtCore.QRect(80, 230, 121, 22))
+        self.salida.setGeometry(QtCore.QRect(80, 210, 121, 22))
         self.salida.setObjectName("salida")
         self.btnCargarArchivo = QtWidgets.QPushButton(self.centralwidget)
         self.btnCargarArchivo.setEnabled(True)
-        self.btnCargarArchivo.setGeometry(QtCore.QRect(390, 530, 111, 41))
+        self.btnCargarArchivo.setGeometry(QtCore.QRect(260, 490, 111, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -86,37 +86,21 @@ class Ui_MainWindow(object):
         self.btnCargarArchivo.setFont(font)
         self.btnCargarArchivo.setObjectName("btnCargarArchivo")
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(10, 180, 71, 20))
+        self.label_7.setGeometry(QtCore.QRect(10, 170, 71, 20))
         self.label_7.setObjectName("label_7")
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(10, 230, 71, 20))
+        self.label_8.setGeometry(QtCore.QRect(10, 210, 71, 20))
         self.label_8.setObjectName("label_8")
-        self.btnCargarParqueo = QtWidgets.QPushButton(self.centralwidget)
-        self.btnCargarParqueo.setEnabled(True)
-        self.btnCargarParqueo.setGeometry(QtCore.QRect(620, 40, 121, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.btnCargarParqueo.setFont(font)
-        self.btnCargarParqueo.setObjectName("btnCargarParqueo")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(180, 10, 141, 21))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.label_9 = QtWidgets.QLabel(self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(580, 10, 221, 21))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_9.setFont(font)
-        self.label_9.setObjectName("label_9")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(210, 140, 101, 151))
+        self.groupBox_2.setGeometry(QtCore.QRect(540, 20, 101, 151))
         self.groupBox_2.setObjectName("groupBox_2")
         self.isSedan = QtWidgets.QRadioButton(self.groupBox_2)
         self.isSedan.setGeometry(QtCore.QRect(10, 20, 82, 17))
@@ -137,18 +121,32 @@ class Ui_MainWindow(object):
         self.isCamioneta.setGeometry(QtCore.QRect(10, 120, 82, 17))
         self.isCamioneta.setObjectName("isCamioneta")
         self.tablaRegistros = QtWidgets.QTableWidget(self.centralwidget)
-        self.tablaRegistros.setGeometry(QtCore.QRect(10, 310, 921, 192))
-        self.tablaRegistros.setObjectName("tablaRegistros")
-        self.tablaRegistros.setColumnCount(0)
+        self.tablaRegistros.setGeometry(QtCore.QRect(10, 290, 631, 192))
+        self.tablaRegistros.setShowGrid(True)
+        self.tablaRegistros.setGridStyle(QtCore.Qt.CustomDashLine)
         self.tablaRegistros.setRowCount(0)
-        self.tablaParqueos = QtWidgets.QTableWidget(self.centralwidget)
-        self.tablaParqueos.setGeometry(QtCore.QRect(480, 80, 451, 192))
-        self.tablaParqueos.setObjectName("tablaParqueos")
-        self.tablaParqueos.setColumnCount(0)
-        self.tablaParqueos.setRowCount(0)
+        self.tablaRegistros.setColumnCount(0)
+        self.tablaRegistros.setObjectName("tablaRegistros")
+        self.tablaRegistros.horizontalHeader().setVisible(False)
+        self.tablaRegistros.verticalHeader().setVisible(False)
+        self.tablaRegistros.verticalHeader().setHighlightSections(False)
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(230, 180, 171, 16))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(390, 180, 121, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(230, 210, 391, 27))
+        self.comboBox.setObjectName("comboBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 947, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 651, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -174,9 +172,7 @@ class Ui_MainWindow(object):
         self.btnCargarArchivo.setText(_translate("MainWindow", "Cargar Archivo"))
         self.label_7.setText(_translate("MainWindow", "Hora Entrada"))
         self.label_8.setText(_translate("MainWindow", "Hora Salida"))
-        self.btnCargarParqueo.setText(_translate("MainWindow", "Cargar Parqueos"))
         self.label.setText(_translate("MainWindow", "Formulario"))
-        self.label_9.setText(_translate("MainWindow", "Parqueos disponibles"))
         self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox"))
         self.isSedan.setText(_translate("MainWindow", "Sedan"))
         self.isCoupe.setText(_translate("MainWindow", "Coupe"))
@@ -184,16 +180,16 @@ class Ui_MainWindow(object):
         self.isSUV.setText(_translate("MainWindow", "SUV"))
         self.isPickUp.setText(_translate("MainWindow", "Pick Up"))
         self.isCamioneta.setText(_translate("MainWindow", "Camioneta"))
+        self.label_9.setText(_translate("MainWindow", "parqueos disponibles"))
+        self.pushButton.setText(_translate("MainWindow", "Buscar parqueos"))
         self.cargarColumnasYfilas()
         self.btnCargarArchivo.clicked.connect(self.inicializarDataArchivos)
-        self.btnCargarParqueo.clicked.connect(self.inicializarDataParqueos)
         self.btnAgregar.clicked.connect(self.agregarInfo)
+        self.pushButton.clicked.connect(self.inicializarDataParqueos)
 
     def cargarColumnasYfilas(self):
-        self.tablaRegistros.setColumnCount(8)
+        self.tablaRegistros.setColumnCount(9)
         self.tablaRegistros.setRowCount(1)
-        self.tablaParqueos.setColumnCount(5)
-        self.tablaParqueos.setRowCount(1)
 
         self.tablaRegistros.setItem(0,0,QtWidgets.QTableWidgetItem("Nombre"))
         self.tablaRegistros.setItem(0,1,QtWidgets.QTableWidgetItem("Apellido"))
@@ -202,39 +198,256 @@ class Ui_MainWindow(object):
         self.tablaRegistros.setItem(0,4,QtWidgets.QTableWidgetItem("Placa"))
         self.tablaRegistros.setItem(0,5,QtWidgets.QTableWidgetItem("Hora entrada"))
         self.tablaRegistros.setItem(0,6,QtWidgets.QTableWidgetItem("Hora Salida"))
-        self.tablaRegistros.setItem(0,7,QtWidgets.QTableWidgetItem("Parqueo donde se ubica"))
-
-        self.tablaParqueos.setItem(0,0,QtWidgets.QTableWidgetItem(" "))
-        self.tablaParqueos.setItem(0,1,QtWidgets.QTableWidgetItem("Nombre"))
-        self.tablaParqueos.setItem(0,2,QtWidgets.QTableWidgetItem("ubicacion"))
-        self.tablaParqueos.setItem(0,3,QtWidgets.QTableWidgetItem("capacidad"))
-        self.tablaParqueos.setItem(0,4,QtWidgets.QTableWidgetItem("servicios incluidos"))
+        self.tablaRegistros.setItem(0,7,QtWidgets.QTableWidgetItem("Tipo de Vehiculo"))
+        self.tablaRegistros.setItem(0,8,QtWidgets.QTableWidgetItem("Parqueo donde se ubica"))
 
         self.tablaRegistros.horizontalHeader().setStretchLastSection(True)
         self.tablaRegistros.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
-        self.tablaParqueos.horizontalHeader().setStretchLastSection(True)
-        self.tablaParqueos.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         self.inicializarDataParqueos()
         self.entrada.setDateTime(QtCore.QDateTime.currentDateTime())
         self.salida.setDateTime(QtCore.QDateTime.currentDateTime())
 
-
     def inicializarDataParqueos(self):
-        fileP = open(r"C:\Users\Compu Fire\eclipse\Documents\parqueos.txt","r")
+        fileP = open(r".\parqueos.txt","r")#poner r antes de tu cadena normal. Convierte una cadena normal en una cadena sin procesar:
+        cw = self.carWash.isChecked()
+        b = self.sanitario.isChecked()
+        a = self.aspirado.isChecked()
         c=0
-        for line in fileP.readlines():
-            c= c+1
-            l = line.split("-")
-            self.tablaParqueos.setRowCount(c+1)
-            self.tablaParqueos.setItem(c,1,QtWidgets.QTableWidgetItem(l[0]))
-            self.tablaParqueos.setItem(c,2,QtWidgets.QTableWidgetItem(l[1]))
-            self.tablaParqueos.setItem(c,3,QtWidgets.QTableWidgetItem(l[2]))
-            self.tablaParqueos.setItem(c,4,QtWidgets.QTableWidgetItem(l[3]))
+        if self.comboBox.count() == 0:
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+        if(self.isSedan.isChecked()):
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+       
+        elif self.isCoupe.isChecked():
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+
+        elif self.isHatchBack.isChecked():
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+            
+        elif self.isSUV.isChecked():
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+
+        elif self.isPickUp.isChecked():
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+
+        elif self.isCamioneta.isChecked():
+            self.comboBox.clear()
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                servsol = l[2].split(",")
+                vdisp = l[1].split(",")
+                if("Sedan" in vdisp):
+                    if(cw == True and b == True and a == True):
+                        if(len(servsol) == 3):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif (cw == True and b == True):
+                        if("car wash" in servsol and "sanitario\n" in servsol or "car wash\n" in servsol or "sanitario" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True and a == True):
+                        if("sanitario" in servsol and "aspirado\n" in servsol or "sanitario\n" in servsol or "aspirado" in servsol ):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True and a == True):
+                        if("car wash" in servsol and "aspirado\n" in servsol or "car wash\n" in servsol or "aspirado" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(cw == True):
+                        if("car wash" in servsol or "car wash\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(b == True):
+                        if("sanitario" in servsol or "sanitario\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                    elif(a == True):
+                        if("aspirado" in servsol or "aspirado\n" in servsol):
+                            self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+            if self.comboBox.count() == 0:
+                fileP = open(r".\parqueos.txt","r")
+                for line in fileP.readlines():
+                    c= c+1
+                    l = line.split("-")
+                    self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
+                messagebox.showinfo("proyecto parqueos","no se encontro ningun parqueo, se volvera a mostrar todos los parqueos disponibles favor realizar otra busqueda cambiando parametros o seleccione uno de la lista.")
+        else:
+            for line in fileP.readlines():
+                c= c+1
+                l = line.split("-")
+                self.comboBox.addItem("PARQUEO:{p}//vehiculos:{v}//SERVICIOS:{s}".format(p=l[0],v= l[1], s=l[2]))
 
     def inicializarDataArchivos(self):
-        fileDa = open(r"C:\Users\Compu Fire\eclipse\Documents\demo.txt","r") #pon r antes de tu cadena normal. Convierte una cadena normal en una cadena sin procesar:
+        fileDa = open(r".\demo.txt","r")
         c =  self.tablaRegistros.rowCount()
-
         for line in fileDa.readlines():
             c=c+1
             l = line.split(",")
@@ -246,6 +459,8 @@ class Ui_MainWindow(object):
             self.tablaRegistros.setItem(c-1,4,QtWidgets.QTableWidgetItem(l[4]))
             self.tablaRegistros.setItem(c-1,5,QtWidgets.QTableWidgetItem(l[5]))
             self.tablaRegistros.setItem(c-1,6,QtWidgets.QTableWidgetItem(l[6]))
+            self.tablaRegistros.setItem(c-1,7,QtWidgets.QTableWidgetItem(l[7]))
+            self.tablaRegistros.setItem(c-1,8,QtWidgets.QTableWidgetItem(l[8]))
             linea.append(l)
 
     def agregarInfo(self):
@@ -256,7 +471,10 @@ class Ui_MainWindow(object):
         placa = self.placa.text()
         hentrada = self.entrada.dateTime().toString(self.entrada.displayFormat())
         hsalida = self.salida.dateTime().toString(self.salida.displayFormat())
-        #print(name, lastname, phone,nit,placa,hentrada,hsalida)
+        parqueo = self.comboBox.currentText()
+        parqueo = parqueo.split("//")
+        nameP =  parqueo[0].split(":")
+        #print(name, lastname, phone,nit,placa,hentrada,hsalida,nameP[1])
         usuarionuevo = []
         usuarionuevo.append(name)
         usuarionuevo.append(lastname)
@@ -265,22 +483,39 @@ class Ui_MainWindow(object):
         usuarionuevo.append(placa)
         usuarionuevo.append(hentrada)
         usuarionuevo.append(hsalida)
+        usuarionuevo.append(nameP[1])
+        if self.isSedan.isChecked():
+            usuarionuevo.append("Sedan")
+        elif self.isCoupe.isChecked():
+            usuarionuevo.append("Coupe")
+        elif self.isHatchBack.isChecked():
+            usuarionuevo.append("HatchBack")
+        elif self.isSUV.isChecked():
+            usuarionuevo.append("SUV")
+        elif self.isPickUp.isChecked():
+            usuarionuevo.append("PickUp")
+        elif self.isCamioneta.isChecked():
+            usuarionuevo.append("Camioneta")
+
         #print(usuarionuevo)
-        c =  self.tablaRegistros.rowCount()
-        c=c+1
-        self.tablaRegistros.setRowCount(c)
-        self.tablaRegistros.setItem(c-1,0,QtWidgets.QTableWidgetItem(usuarionuevo[0]))
-        self.tablaRegistros.setItem(c-1,1,QtWidgets.QTableWidgetItem(usuarionuevo[1]))
-        self.tablaRegistros.setItem(c-1,2,QtWidgets.QTableWidgetItem(usuarionuevo[2]))
-        self.tablaRegistros.setItem(c-1,3,QtWidgets.QTableWidgetItem(usuarionuevo[3]))
-        self.tablaRegistros.setItem(c-1,4,QtWidgets.QTableWidgetItem(usuarionuevo[4]))
-        self.tablaRegistros.setItem(c-1,5,QtWidgets.QTableWidgetItem(usuarionuevo[5]))
-        self.tablaRegistros.setItem(c-1,6,QtWidgets.QTableWidgetItem(usuarionuevo[6]))
-        linea.append(usuarionuevo)
+        if len(usuarionuevo) < 9 or name=='' or lastname=='' or phone=='' or nit=='' or placa=='':
+            messagebox.showwarning("Datos incompletos","valide que todos los datos solicitados esten llenos")
+        else:
+            c =  self.tablaRegistros.rowCount()
+            c=c+1
+            self.tablaRegistros.setRowCount(c)
+            self.tablaRegistros.setItem(c-1,0,QtWidgets.QTableWidgetItem(usuarionuevo[0]))
+            self.tablaRegistros.setItem(c-1,1,QtWidgets.QTableWidgetItem(usuarionuevo[1]))
+            self.tablaRegistros.setItem(c-1,2,QtWidgets.QTableWidgetItem(usuarionuevo[2]))
+            self.tablaRegistros.setItem(c-1,3,QtWidgets.QTableWidgetItem(usuarionuevo[3]))
+            self.tablaRegistros.setItem(c-1,4,QtWidgets.QTableWidgetItem(usuarionuevo[4]))
+            self.tablaRegistros.setItem(c-1,5,QtWidgets.QTableWidgetItem(usuarionuevo[5]))
+            self.tablaRegistros.setItem(c-1,6,QtWidgets.QTableWidgetItem(usuarionuevo[6]))
+            self.tablaRegistros.setItem(c-1,7,QtWidgets.QTableWidgetItem(usuarionuevo[8]))
+            self.tablaRegistros.setItem(c-1,8,QtWidgets.QTableWidgetItem(usuarionuevo[7]))
+            linea.append(usuarionuevo)
         print(linea)
 linea = []
-
-
 
 if __name__ == "__main__":
     import sys
